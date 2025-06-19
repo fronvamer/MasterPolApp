@@ -21,6 +21,10 @@ namespace MasterPolApp
             InitializeComponent();
             LoadPartners();
         }
+         
+        private Stack<int> backStack = new Stack<int>();
+        private Stack<int> forwardStack = new Stack<int>(); 
+        private bool navigationInternally = false;
 
         //private void LoadPartners()
         //{
@@ -150,6 +154,10 @@ namespace MasterPolApp
         }
         private void tabControlMain_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+
+
+            // Загрузка истории при переходе на вкладку "История"
             if (tabControlMain.SelectedIndex == 1)
             {
                 LoadComboBoxHistory();
@@ -204,6 +212,16 @@ namespace MasterPolApp
             MessageBox.Show("Партнер успешно добавлен");
 
             LoadPartners();
+        }
+
+        private void buttonBack_Click_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonForward_Click_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -3,60 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\masterpolapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|c:\\users\\fronvamer\\source\\repos\\masterpolapp\\masterpolapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:masterpolapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|c:\\users\\fronvamer\\source\\repos\\masterpolapp\\masterpolapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:masterpolapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\masterpolapp\\models\\partners.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:masterpolapp\\models\\partners.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:MasterPolApp\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\masterpolapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:masterpolapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|c:\\users\\fronvamer\\source\\repos\\masterpolapp\\masterpolapp\\third-party scripts\\create_tables.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:masterpolapp\\third-party scripts\\create_tables.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Models\\Partners.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:MasterPolApp\\Models\\Partners.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\masterpolapp\\models\\dbmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:masterpolapp\\models\\dbmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\third-party scripts\\CREATE_TABLES.SQL||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:MasterPolApp\\third-party scripts\\CREATE_TABLES.SQL||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\masterpolapp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:masterpolapp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:MasterPolApp\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\masterpolapp\\resources\\\u043C\u0430\u0441\u0442\u0435\u0440 \u043F\u043E\u043B.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:masterpolapp\\resources\\\u043C\u0430\u0441\u0442\u0435\u0440 \u043F\u043E\u043B.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Resources\\\u041C\u0430\u0441\u0442\u0435\u0440 \u043F\u043E\u043B.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:MasterPolApp\\Resources\\\u041C\u0430\u0441\u0442\u0435\u0440 \u043F\u043E\u043B.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\masterpolapp\\resources\\\u043C\u0430\u0441\u0442\u0435\u0440 \u043F\u043E\u043B.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}",
-      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:masterpolapp\\resources\\\u043C\u0430\u0441\u0442\u0435\u0440 \u043F\u043E\u043B.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Models\\ProductTypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:MasterPolApp\\Models\\ProductTypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\masterpolapp\\models\\producttypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:masterpolapp\\models\\producttypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Models\\DbModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:MasterPolApp\\Models\\DbModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\masterpolapp\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:masterpolapp\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\App.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:MasterPolApp\\App.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\masterpolapp\\models\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:masterpolapp\\models\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Resources\\\u041C\u0430\u0441\u0442\u0435\u0440 \u043F\u043E\u043B.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:MasterPolApp\\Resources\\\u041C\u0430\u0441\u0442\u0435\u0440 \u043F\u043E\u043B.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\masterpolapp\\models\\partnerproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:masterpolapp\\models\\partnerproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Models\\Products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:MasterPolApp\\Models\\Products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\masterpolapp\\properties\\resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:masterpolapp\\properties\\resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Models\\PartnerProducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:MasterPolApp\\Models\\PartnerProducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Properties\\Resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|solutionrelative:MasterPolApp\\Properties\\Resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{38AEFCC5-DCCE-4F83-977A-4DD0CC0A27CF}|MasterPolApp\\MasterPolApp.csproj|c:\\users\\fronvamer\\source\\repos\\masterpolapp\\masterpolapp\\third-party scripts\\create_tables.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
@@ -70,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,15 +78,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Program.cs",
-              "RelativeDocumentMoniker": "MasterPolApp\\Program.cs",
-              "ToolTip": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Program.cs",
-              "RelativeToolTip": "MasterPolApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAATAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Form1.cs",
+              "RelativeDocumentMoniker": "MasterPolApp\\Form1.cs",
+              "ToolTip": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Form1.cs",
+              "RelativeToolTip": "MasterPolApp\\Form1.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAMwKYAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T07:42:03.418Z",
+              "WhenOpened": "2025-06-18T13:47:02.399Z",
               "EditorCaption": ""
             },
             {
@@ -103,18 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "\u041C\u0430\u0441\u0442\u0435\u0440 \u043F\u043E\u043B.ico - Icon [256x256, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]",
-              "DocumentMoniker": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Resources\\\u041C\u0430\u0441\u0442\u0435\u0440 \u043F\u043E\u043B.ico",
-              "RelativeDocumentMoniker": "MasterPolApp\\Resources\\\u041C\u0430\u0441\u0442\u0435\u0440 \u043F\u043E\u043B.ico",
-              "ToolTip": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Resources\\\u041C\u0430\u0441\u0442\u0435\u0440 \u043F\u043E\u043B.ico - Icon [256x256, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]",
-              "RelativeToolTip": "MasterPolApp\\Resources\\\u041C\u0430\u0441\u0442\u0435\u0440 \u043F\u043E\u043B.ico - Icon [256x256, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, PNG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001525|",
-              "WhenOpened": "2025-06-18T17:45:47.778Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "ProductTypes.cs",
               "DocumentMoniker": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Models\\ProductTypes.cs",
               "RelativeDocumentMoniker": "MasterPolApp\\Models\\ProductTypes.cs",
@@ -126,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "DbModel.cs",
               "DocumentMoniker": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Models\\DbModel.cs",
               "RelativeDocumentMoniker": "MasterPolApp\\Models\\DbModel.cs",
@@ -138,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\App.config",
               "RelativeDocumentMoniker": "MasterPolApp\\App.config",
@@ -151,58 +140,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Form1.cs",
-              "RelativeDocumentMoniker": "MasterPolApp\\Form1.cs",
-              "ToolTip": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "MasterPolApp\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T13:46:44.776Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Form1.cs",
-              "RelativeDocumentMoniker": "MasterPolApp\\Form1.cs",
-              "ToolTip": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Form1.cs",
-              "RelativeToolTip": "MasterPolApp\\Form1.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAgwDUAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T13:47:02.399Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "MasterPolApp\\Form1.Designer.cs",
               "ToolTip": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Form1.Designer.cs",
               "RelativeToolTip": "MasterPolApp\\Form1.Designer.cs",
-              "ViewState": "AgIAAKwAAAAAAAAAAAAWwMQAAABeAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAMwFAAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-18T15:00:46.541Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Partners.cs",
               "DocumentMoniker": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Models\\Partners.cs",
               "RelativeDocumentMoniker": "MasterPolApp\\Models\\Partners.cs",
               "ToolTip": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Models\\Partners.cs",
               "RelativeToolTip": "MasterPolApp\\Models\\Partners.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAuwC4AAABIAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAwDAAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-18T14:55:02.138Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "\u041C\u0430\u0441\u0442\u0435\u0440 \u043F\u043E\u043B.png",
               "DocumentMoniker": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Resources\\\u041C\u0430\u0441\u0442\u0435\u0440 \u043F\u043E\u043B.png",
               "RelativeDocumentMoniker": "MasterPolApp\\Resources\\\u041C\u0430\u0441\u0442\u0435\u0440 \u043F\u043E\u043B.png",
@@ -222,6 +186,42 @@
               "ViewState": "AgIAAAkAAAAAAAAAAAAqwBAAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-18T16:59:50.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Form1.cs",
+              "RelativeDocumentMoniker": "MasterPolApp\\Form1.cs",
+              "ToolTip": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "MasterPolApp\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T13:46:44.776Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Program.cs",
+              "RelativeDocumentMoniker": "MasterPolApp\\Program.cs",
+              "ToolTip": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Program.cs",
+              "RelativeToolTip": "MasterPolApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T07:42:03.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "\u041C\u0430\u0441\u0442\u0435\u0440 \u043F\u043E\u043B.ico",
+              "DocumentMoniker": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Resources\\\u041C\u0430\u0441\u0442\u0435\u0440 \u043F\u043E\u043B.ico",
+              "RelativeDocumentMoniker": "MasterPolApp\\Resources\\\u041C\u0430\u0441\u0442\u0435\u0440 \u043F\u043E\u043B.ico",
+              "ToolTip": "C:\\Users\\fronvamer\\source\\repos\\MasterPolApp\\MasterPolApp\\Resources\\\u041C\u0430\u0441\u0442\u0435\u0440 \u043F\u043E\u043B.ico",
+              "RelativeToolTip": "MasterPolApp\\Resources\\\u041C\u0430\u0441\u0442\u0435\u0440 \u043F\u043E\u043B.ico",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001525|",
+              "WhenOpened": "2025-06-18T17:45:47.778Z"
             },
             {
               "$type": "Document",
