@@ -47,15 +47,15 @@ namespace MasterPolApp
 
                     .Select(p => new
                     {
-                        p.Id,
-                        p.Name,
-                        p.Director,
-                        p.Email,
-                        p.Address,
-                        p.INN,
-                        p.Phone,
-                        p.Rating,
-                        p.Discount // теперь можно безопасно использовать
+                        Номер_пп = p.Id,
+                        Наименование = p.Name,
+                        Директор = p.Director,
+                        Почта = p.Email,
+                        Адрес = p.Address,
+                        ИНН = p.INN,
+                        Телефон = p.Phone,
+                        Рейтинг = p.Rating,
+                        Скидка = p.Discount 
                     })
                     .ToList();
 
@@ -141,11 +141,11 @@ namespace MasterPolApp
                 var historyData = query
                     .Select(pp => new
                     {
-                        pp.Id,
-                        PartnerName = pp.Partners.Name,
-                        ProductName = pp.Products.Name,
-                        pp.Quantity,
-                        pp.SaleDate
+                        Номер_пп = pp.Id,
+                        Наименование_партнера = pp.Partners.Name,
+                        Наименование_продукта = pp.Products.Name,
+                        Количество = pp.Quantity,
+                        Дата_продажи = pp.SaleDate
                     })
                     .ToList();
 
@@ -311,5 +311,9 @@ namespace MasterPolApp
             comboBoxUpdatePartner.SelectedValue = selectedPartnerId;
         }
 
+        private void dataGridViewPartners_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

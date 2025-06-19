@@ -132,12 +132,15 @@
             // 
             // dataGridViewPartners
             // 
+            this.dataGridViewPartners.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewPartners.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(232)))), ((int)(((byte)(211)))));
             this.dataGridViewPartners.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPartners.GridColor = System.Drawing.SystemColors.ButtonShadow;
             this.dataGridViewPartners.Location = new System.Drawing.Point(3, 71);
             this.dataGridViewPartners.Name = "dataGridViewPartners";
             this.dataGridViewPartners.Size = new System.Drawing.Size(1015, 423);
             this.dataGridViewPartners.TabIndex = 4;
+            this.dataGridViewPartners.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPartners_CellContentClick);
             // 
             // pictureBox1
             // 
@@ -198,11 +201,12 @@
             // 
             // dataGridViewHistory
             // 
+            this.dataGridViewHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewHistory.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(232)))), ((int)(((byte)(211)))));
             this.dataGridViewHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewHistory.Location = new System.Drawing.Point(6, 75);
             this.dataGridViewHistory.Name = "dataGridViewHistory";
-            this.dataGridViewHistory.Size = new System.Drawing.Size(1008, 435);
+            this.dataGridViewHistory.Size = new System.Drawing.Size(1008, 414);
             this.dataGridViewHistory.TabIndex = 3;
             // 
             // comboBoxHistory
