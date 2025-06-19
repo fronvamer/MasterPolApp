@@ -36,9 +36,22 @@ CREATE TABLE PartnerProducts (
     CONSTRAINT FK_PartnerProducts_Products FOREIGN KEY (ProductId) REFERENCES Products(Id)
 );
 
--- OldQuery
+ALTER TABLE ProductTypes
+ADD WastePercentage FLOAT NOT NULL DEFAULT 0;
 
--- Создание таблицы партнеров
+
+  UPDATE ProductTypes SET WastePercentage = 2.5 WHERE Id = 1;
+UPDATE ProductTypes SET WastePercentage = 3.0 WHERE Id = 2;
+UPDATE ProductTypes SET WastePercentage = 4.0 WHERE Id = 3;
+UPDATE ProductTypes SET WastePercentage = 5.5 WHERE Id = 4;
+
+INSERT INTO MaterialTypes (Id, Name, WastePercentage) VALUES (1, 'Материал A', 2.5);
+INSERT INTO MaterialTypes (Id, Name, WastePercentage) VALUES (2, 'Материал B', 3.0);
+INSERT INTO MaterialTypes (Id, Name, WastePercentage) VALUES (3, 'Материал C', 4.0);
+INSERT INTO MaterialTypes (Id, Name, WastePercentage) VALUES (4, 'Материал D', 5.5);
+
+
+
 CREATE TABLE Partners (
     PartnerId INT IDENTITY(1,1) PRIMARY KEY,
     PartnerType NVARCHAR(50),
@@ -48,11 +61,11 @@ CREATE TABLE Partners (
     DirectorName NVARCHAR(255),
     Phone NVARCHAR(20),
     Email NVARCHAR(100),
-    Logo NVARCHAR(MAX), -- Путь или base64
+    Logo NVARCHAR(MAX), 
     Rating INT
 );
 
--- Места продаж партнера
+
 CREATE TABLE SalesLocations (
     SalesLocationId INT IDENTITY(1,1) PRIMARY KEY,
     PartnerId INT FOREIGN KEY REFERENCES Partners(PartnerId) ON DELETE CASCADE,
@@ -60,7 +73,7 @@ CREATE TABLE SalesLocations (
     LocationType NVARCHAR(50)
 );
 
--- История реализации продукции
+
 CREATE TABLE SalesHistory (
     SaleId INT IDENTITY(1,1) PRIMARY KEY,
     PartnerId INT FOREIGN KEY REFERENCES Partners(PartnerId) ON DELETE CASCADE,
@@ -70,7 +83,7 @@ CREATE TABLE SalesHistory (
     SaleDate DATE
 );
 
--- История изменения рейтингов
+
 CREATE TABLE RatingHistory (
     RatingChangeId INT IDENTITY(1,1) PRIMARY KEY,
     PartnerId INT FOREIGN KEY REFERENCES Partners(PartnerId) ON DELETE CASCADE,

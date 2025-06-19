@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPagePartners = new System.Windows.Forms.TabPage();
+            this.buttonPartnerEditNavigate = new System.Windows.Forms.Button();
             this.buttonDeletePartner = new System.Windows.Forms.Button();
             this.dataGridViewPartners = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -78,7 +79,17 @@
             this.comboBoxUpdatePartner = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.LabelUpdatePartnerInfo = new System.Windows.Forms.Label();
-            this.buttonPartnerEditNavigate = new System.Windows.Forms.Button();
+            this.tabPageAddSale = new System.Windows.Forms.TabPage();
+            this.buttonAddSale = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textBoxAddSaleQuanity = new System.Windows.Forms.TextBox();
+            this.comboBoxAddSaleProduct = new System.Windows.Forms.ComboBox();
+            this.comboBoxAddSalePartner = new System.Windows.Forms.ComboBox();
+            this.buttonAddPartnerProducts = new System.Windows.Forms.Button();
             this.tabControlMain.SuspendLayout();
             this.tabPagePartners.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPartners)).BeginInit();
@@ -87,6 +98,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHistory)).BeginInit();
             this.tabPageAddPartner.SuspendLayout();
             this.tabPageUpdatePartner.SuspendLayout();
+            this.tabPageAddSale.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlMain
@@ -95,6 +107,7 @@
             this.tabControlMain.Controls.Add(this.tabPageHistory);
             this.tabControlMain.Controls.Add(this.tabPageAddPartner);
             this.tabControlMain.Controls.Add(this.tabPageUpdatePartner);
+            this.tabControlMain.Controls.Add(this.tabPageAddSale);
             this.tabControlMain.Location = new System.Drawing.Point(3, 24);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
@@ -119,6 +132,16 @@
             this.tabPagePartners.TabIndex = 0;
             this.tabPagePartners.Text = "Партнеры";
             this.tabPagePartners.UseVisualStyleBackColor = true;
+            // 
+            // buttonPartnerEditNavigate
+            // 
+            this.buttonPartnerEditNavigate.Location = new System.Drawing.Point(714, 42);
+            this.buttonPartnerEditNavigate.Name = "buttonPartnerEditNavigate";
+            this.buttonPartnerEditNavigate.Size = new System.Drawing.Size(107, 23);
+            this.buttonPartnerEditNavigate.TabIndex = 6;
+            this.buttonPartnerEditNavigate.Text = "Редактировать";
+            this.buttonPartnerEditNavigate.UseVisualStyleBackColor = true;
+            this.buttonPartnerEditNavigate.Click += new System.EventHandler(this.buttonPartnerEditNavigate_Click);
             // 
             // buttonDeletePartner
             // 
@@ -614,15 +637,118 @@
             this.LabelUpdatePartnerInfo.TabIndex = 0;
             this.LabelUpdatePartnerInfo.Text = "Мастер пол | Редактирование партнера";
             // 
-            // buttonPartnerEditNavigate
+            // tabPageAddSale
             // 
-            this.buttonPartnerEditNavigate.Location = new System.Drawing.Point(714, 42);
-            this.buttonPartnerEditNavigate.Name = "buttonPartnerEditNavigate";
-            this.buttonPartnerEditNavigate.Size = new System.Drawing.Size(107, 23);
-            this.buttonPartnerEditNavigate.TabIndex = 6;
-            this.buttonPartnerEditNavigate.Text = "Редактировать";
-            this.buttonPartnerEditNavigate.UseVisualStyleBackColor = true;
-            this.buttonPartnerEditNavigate.Click += new System.EventHandler(this.buttonPartnerEditNavigate_Click);
+            this.tabPageAddSale.Controls.Add(this.buttonAddPartnerProducts);
+            this.tabPageAddSale.Controls.Add(this.buttonAddSale);
+            this.tabPageAddSale.Controls.Add(this.button1);
+            this.tabPageAddSale.Controls.Add(this.label23);
+            this.tabPageAddSale.Controls.Add(this.label22);
+            this.tabPageAddSale.Controls.Add(this.label21);
+            this.tabPageAddSale.Controls.Add(this.label20);
+            this.tabPageAddSale.Controls.Add(this.textBoxAddSaleQuanity);
+            this.tabPageAddSale.Controls.Add(this.comboBoxAddSaleProduct);
+            this.tabPageAddSale.Controls.Add(this.comboBoxAddSalePartner);
+            this.tabPageAddSale.Location = new System.Drawing.Point(4, 22);
+            this.tabPageAddSale.Name = "tabPageAddSale";
+            this.tabPageAddSale.Size = new System.Drawing.Size(1021, 500);
+            this.tabPageAddSale.TabIndex = 4;
+            this.tabPageAddSale.Text = "Добавление продажи";
+            this.tabPageAddSale.UseVisualStyleBackColor = true;
+            // 
+            // buttonAddSale
+            // 
+            this.buttonAddSale.Location = new System.Drawing.Point(0, 0);
+            this.buttonAddSale.Name = "buttonAddSale";
+            this.buttonAddSale.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddSale.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label23.Location = new System.Drawing.Point(95, 198);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(138, 16);
+            this.label23.TabIndex = 6;
+            this.label23.Text = "Количество товара:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label22.Location = new System.Drawing.Point(59, 158);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(174, 16);
+            this.label22.TabIndex = 5;
+            this.label22.Text = "Наименование продукта:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label21.Location = new System.Drawing.Point(59, 121);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(175, 16);
+            this.label21.TabIndex = 4;
+            this.label21.Text = "Наименование партнера:";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(186)))), ((int)(((byte)(128)))));
+            this.label20.Location = new System.Drawing.Point(40, 46);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(294, 21);
+            this.label20.TabIndex = 3;
+            this.label20.Text = "Мастер пол | Добавление продажи ";
+            // 
+            // textBoxAddSaleQuanity
+            // 
+            this.textBoxAddSaleQuanity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxAddSaleQuanity.Location = new System.Drawing.Point(240, 198);
+            this.textBoxAddSaleQuanity.Name = "textBoxAddSaleQuanity";
+            this.textBoxAddSaleQuanity.Size = new System.Drawing.Size(280, 22);
+            this.textBoxAddSaleQuanity.TabIndex = 2;
+            // 
+            // comboBoxAddSaleProduct
+            // 
+            this.comboBoxAddSaleProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxAddSaleProduct.FormattingEnabled = true;
+            this.comboBoxAddSaleProduct.Location = new System.Drawing.Point(240, 161);
+            this.comboBoxAddSaleProduct.Name = "comboBoxAddSaleProduct";
+            this.comboBoxAddSaleProduct.Size = new System.Drawing.Size(280, 24);
+            this.comboBoxAddSaleProduct.TabIndex = 1;
+            // 
+            // comboBoxAddSalePartner
+            // 
+            this.comboBoxAddSalePartner.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxAddSalePartner.FormattingEnabled = true;
+            this.comboBoxAddSalePartner.Location = new System.Drawing.Point(240, 121);
+            this.comboBoxAddSalePartner.Name = "comboBoxAddSalePartner";
+            this.comboBoxAddSalePartner.Size = new System.Drawing.Size(280, 24);
+            this.comboBoxAddSalePartner.TabIndex = 0;
+            // 
+            // buttonAddPartnerProducts
+            // 
+            this.buttonAddPartnerProducts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(186)))), ((int)(((byte)(128)))));
+            this.buttonAddPartnerProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAddPartnerProducts.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonAddPartnerProducts.Location = new System.Drawing.Point(240, 236);
+            this.buttonAddPartnerProducts.Name = "buttonAddPartnerProducts";
+            this.buttonAddPartnerProducts.Size = new System.Drawing.Size(166, 30);
+            this.buttonAddPartnerProducts.TabIndex = 7;
+            this.buttonAddPartnerProducts.Text = "Добавление продажи";
+            this.buttonAddPartnerProducts.UseVisualStyleBackColor = false;
+            this.buttonAddPartnerProducts.Click += new System.EventHandler(this.buttonAddPartnerProducts_Click);
             // 
             // Form1
             // 
@@ -645,6 +771,8 @@
             this.tabPageAddPartner.PerformLayout();
             this.tabPageUpdatePartner.ResumeLayout(false);
             this.tabPageUpdatePartner.PerformLayout();
+            this.tabPageAddSale.ResumeLayout(false);
+            this.tabPageAddSale.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -701,6 +829,17 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button buttonUpdatePartner;
         private System.Windows.Forms.Button buttonPartnerEditNavigate;
+        private System.Windows.Forms.TabPage tabPageAddSale;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox textBoxAddSaleQuanity;
+        private System.Windows.Forms.ComboBox comboBoxAddSaleProduct;
+        private System.Windows.Forms.ComboBox comboBoxAddSalePartner;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAddSale;
+        private System.Windows.Forms.Button buttonAddPartnerProducts;
     }
 }
 

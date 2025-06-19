@@ -1,0 +1,105 @@
+﻿<CodeSnippet Format="1.0.0">
+  <Header>
+    <Title>log</Title>
+    <Shortcut>log</Shortcut>
+    <Description>Console log</Description>
+    <Author>name</Author>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>message</ID>
+        <ToolTip>Message to log</ToolTip>
+        <Default>message</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="csharp">
+		<![CDATA[
+		private void buttonGoToAddPartner_Click(object sender, EventArgs e)
+        {
+            tabControlMain.SelectedIndex = 2;
+        }
+
+        private void buttonRefreshPartners_Click(object sender, EventArgs e)
+        {
+            LoadPartners();
+        }
+		
+		 private void buttonDeletePartner_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewPartners.CurrentRow == null)
+            {
+                MessageBox.Show("Выберите партнёра для удаления.");
+                return;
+            }
+
+            var result = MessageBox.Show("Вы уверены, что хотите удалить выбранного партнёра?", "Подтверждение удаления", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result != DialogResult.Yes)
+                return;
+
+            int partnerId = (int)dataGridViewPartners.CurrentRow.Cells["Номер_пп"].Value;
+
+            using (var context = new DbModel())
+            {
+                var partnerToDelete = context.Partners.FirstOrDefault(p => p.Id == partnerId);
+                if (partnerToDelete != null)
+                {
+                    context.Partners.Remove(partnerToDelete);
+                    context.SaveChanges();
+                    MessageBox.Show("Партнёр успешно удалён.");
+
+                    LoadPartners(); // Обновить таблицу после удаления
+                }
+                else
+                {
+                    MessageBox.Show("Партнёр не найден в базе данных.");
+                }
+            }
+        }
+		
+		  private void LoadComboBoxHistory()
+        {
+            using (var context = new DbModel())
+            {
+                var partners = context.Partners
+                    .Select(p => new { p.Id, p.Name })
+                    .ToList();
+
+                comboBoxHistory.DisplayMember = "Name";
+                comboBoxHistory.ValueMember = "Id";
+                comboBoxHistory.DataSource = partners;
+            }
+        }
+        private void LoadHistory(int? partnerId = null)
+        {
+            using (var context = new DbModel())
+            {
+                var query = context.PartnerProducts
+                    .Include(pp => pp.Partners)
+                    .Include(pp => pp.Products)
+                    .AsQueryable();
+
+                if (partnerId.HasValue)
+                {
+                    query = query.Where(pp => pp.PartnerId == partnerId.Value);
+                }
+
+                var historyData = query
+                    .Select(pp => new
+                    {
+                        Номер_пп = pp.Id,
+                        Наименование_партнера = pp.Partners.Name,
+                        Наименование_продукта = pp.Products.Name,
+                        Количество = pp.Quantity,
+                        Дата_продажи = pp.SaleDate
+                    })
+                    .ToList();
+
+                dataGridViewHistory.DataSource = historyData;
+            }
+        }
+
+	 
+]]></Code>
+  </Snippet>
+</CodeSnippet>

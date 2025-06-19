@@ -8,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,13 +17,14 @@ namespace MasterPolApp
 {
     public partial class Form1 : Form
     {
+        private readonly DbModel _context;
         public Form1()
         {
             InitializeComponent();
+            _context = new DbModel();
             LoadPartners();
-         
         }
-         
+
 
 
 
@@ -33,7 +35,7 @@ namespace MasterPolApp
         //        var partners = context.Partners
         //            .Include(p => p.PartnerProducts)
         //            .ToList();
-        //        dataGridViewPartners.DataSource = partners; 
+        //         dataGridViewPartners.DataSource = partners; 
         //    }
         //}
 
@@ -91,7 +93,7 @@ namespace MasterPolApp
             if (result != DialogResult.Yes)
                 return;
 
-            int partnerId = (int)dataGridViewPartners.CurrentRow.Cells["Id"].Value;
+            int partnerId = (int)dataGridViewPartners.CurrentRow.Cells["Номер_пп"].Value;
 
             using (var context = new DbModel())
             {
@@ -166,6 +168,11 @@ namespace MasterPolApp
             {
                 LoadComboBoxUpdatePartner();    
             }
+            if (tabControlMain.SelectedIndex == 4)
+            {
+                LoadComboBoxAddSalePartner();
+                LoadComboBoxAddSaleProduct();
+            }
         }
         private void comboBoxHistory_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -217,7 +224,7 @@ namespace MasterPolApp
             LoadPartners();
         }
 
-        private void LoadComboBoxUpdatePartner ()
+        private void LoadComboBoxUpdatePartner()
         {
 
             using (var context = new DbModel())
@@ -230,7 +237,7 @@ namespace MasterPolApp
                 comboBoxUpdatePartner.DataSource = partners;    
             }
         }
-
+  
         private void comboBoxUpdatePartner_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxUpdatePartner.SelectedValue is int selectedPartnerId)
@@ -301,7 +308,7 @@ namespace MasterPolApp
                 return;
             }
 
-            int selectedPartnerId = (int)dataGridViewPartners.CurrentRow.Cells["Id"].Value;
+            int selectedPartnerId = (int)dataGridViewPartners.CurrentRow.Cells["Номер_пп"].Value;
 
             tabControlMain.SelectedIndex = 3; // Переключаемся на вкладку редактирования
 
@@ -311,9 +318,115 @@ namespace MasterPolApp
             comboBoxUpdatePartner.SelectedValue = selectedPartnerId;
         }
 
+        private void CheckMaterial ()
+        {
+            int materialNeeded = CalculateRequiredMaterial(
+        productTypeId: 2,
+        productCount: 100,
+        parameter1: 1.2,
+        parameter2: 1.5
+    );
+
+            MessageBox.Show($"Необходимое количество материала: {materialNeeded}");
+        }
+
+
+        private int CalculateRequiredMaterial( int productTypeId, int productCount, double parameter1, double parameter2)
+        {
+            if (productCount <= 0 || parameter1 <= 0 || parameter2 <= 0)
+                return -1;
+
+            using (var context = new DbModel())
+            {
+                var productType = context.ProductTypes.Find(productTypeId);
+
+                if (productType == null)
+                    return -1;
+
+                double baseAmountPerProduct = parameter1 * parameter2 * productType.Rate;
+                double totalMaterial = baseAmountPerProduct * productCount;
+
+                double wasteFactor = 1 + (productType.WastePercentage / 100.0);
+                double finalAmount = totalMaterial * wasteFactor;
+
+                return (int)Math.Ceiling(finalAmount); // округляем вверх
+            }
+        }
+
+        private void LoadComboBoxAddSalePartner()
+        {
+            using (var context = new DbModel())
+            {
+                var partners = context.Partners
+                    .Select(p => new { p.Id, p.Name })
+                    .ToList();
+
+                comboBoxAddSalePartner.DisplayMember = "Name";
+                comboBoxAddSalePartner.ValueMember = "Id";
+                comboBoxAddSalePartner.DataSource = partners;
+            }
+        }
+        private void LoadComboBoxAddSaleProduct()
+        {
+            using (var context = new DbModel())
+            {
+                var products = context.Products
+                    .Select(p => new { p.Id, p.Name })
+                    .ToList();
+                comboBoxAddSaleProduct.DisplayMember = "Name";
+                comboBoxAddSaleProduct.ValueMember = "Id";
+                comboBoxAddSaleProduct.DataSource = products;
+
+            }
+        }
+     
+
+        private void buttonAddPartnerProducts_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show("вцфвцф" + DateTime.Today);
+            if (string.IsNullOrWhiteSpace(comboBoxAddSalePartner.Text))
+            {
+                MessageBox.Show("Выберите название партнера");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(comboBoxAddSaleProduct.Text))
+            {
+                MessageBox.Show("Выберите продукт");
+                return;
+            }
+            if (!int.TryParse(textBoxAddSaleQuanity.Text.Trim(), out int quanity))
+            {
+                MessageBox.Show("Введите корректное число для количества");
+                return;
+            }
+
+            using (var context = new DbModel())
+            {
+                var newPartnerProducts = new PartnerProducts
+                {
+                    PartnerId = (int)comboBoxAddSalePartner.SelectedValue,
+                    ProductId = (int)comboBoxAddSaleProduct.SelectedValue,
+                    Quantity = quanity,
+                    SaleDate = DateTime.Today
+
+                };
+                context.PartnerProducts.Add(newPartnerProducts);
+                context.SaveChanges();  
+            }
+            MessageBox.Show("Продажа добавлена");
+
+            LoadHistory();  
+
+
+        }
+
         private void dataGridViewPartners_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
+       
     }
 }
