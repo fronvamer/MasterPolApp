@@ -60,8 +60,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPageUpdatePartner = new System.Windows.Forms.TabPage();
-            this.buttonBack_Click = new System.Windows.Forms.Button();
-            this.buttonForward_Click = new System.Windows.Forms.Button();
             this.tabControlMain.SuspendLayout();
             this.tabPagePartners.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPartners)).BeginInit();
@@ -82,7 +80,7 @@
             this.tabControlMain.SelectedIndex = 0;
             this.tabControlMain.Size = new System.Drawing.Size(1029, 526);
             this.tabControlMain.TabIndex = 0;
-            this.tabControlMain.SelectedIndexChanged += tabControlMain_SelectedIndexChanged;
+            this.tabControlMain.SelectedIndexChanged += new System.EventHandler(this.tabControlMain_SelectedIndexChanged);
             // 
             // tabPagePartners
             // 
@@ -117,7 +115,7 @@
             this.dataGridViewPartners.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPartners.Location = new System.Drawing.Point(3, 71);
             this.dataGridViewPartners.Name = "dataGridViewPartners";
-            this.dataGridViewPartners.Size = new System.Drawing.Size(1015, 444);
+            this.dataGridViewPartners.Size = new System.Drawing.Size(1015, 423);
             this.dataGridViewPartners.TabIndex = 4;
             // 
             // pictureBox1
@@ -171,7 +169,7 @@
             this.tabPageHistory.Location = new System.Drawing.Point(4, 22);
             this.tabPageHistory.Name = "tabPageHistory";
             this.tabPageHistory.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageHistory.Size = new System.Drawing.Size(1021, 521);
+            this.tabPageHistory.Size = new System.Drawing.Size(1021, 500);
             this.tabPageHistory.TabIndex = 1;
             this.tabPageHistory.Text = "История продаж";
             this.tabPageHistory.UseVisualStyleBackColor = true;
@@ -194,7 +192,7 @@
             this.comboBoxHistory.Name = "comboBoxHistory";
             this.comboBoxHistory.Size = new System.Drawing.Size(316, 25);
             this.comboBoxHistory.TabIndex = 2;
-            this.comboBoxHistory.SelectedIndexChanged += comboBoxHistory_SelectedIndexChanged;
+            this.comboBoxHistory.SelectedIndexChanged += new System.EventHandler(this.comboBoxHistory_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -237,7 +235,7 @@
             this.tabPageAddPartner.Controls.Add(this.label4);
             this.tabPageAddPartner.Location = new System.Drawing.Point(4, 22);
             this.tabPageAddPartner.Name = "tabPageAddPartner";
-            this.tabPageAddPartner.Size = new System.Drawing.Size(1021, 521);
+            this.tabPageAddPartner.Size = new System.Drawing.Size(1021, 500);
             this.tabPageAddPartner.TabIndex = 2;
             this.tabPageAddPartner.Text = "Добавление партнера";
             this.tabPageAddPartner.UseVisualStyleBackColor = true;
@@ -397,38 +395,16 @@
             // 
             this.tabPageUpdatePartner.Location = new System.Drawing.Point(4, 22);
             this.tabPageUpdatePartner.Name = "tabPageUpdatePartner";
-            this.tabPageUpdatePartner.Size = new System.Drawing.Size(1021, 521);
+            this.tabPageUpdatePartner.Size = new System.Drawing.Size(1021, 500);
             this.tabPageUpdatePartner.TabIndex = 3;
             this.tabPageUpdatePartner.Text = "Редактирование партнера";
             this.tabPageUpdatePartner.UseVisualStyleBackColor = true;
-            // 
-            // buttonBack_Click
-            // 
-            this.buttonBack_Click.Location = new System.Drawing.Point(720, 12);
-            this.buttonBack_Click.Name = "buttonBack_Click";
-            this.buttonBack_Click.Size = new System.Drawing.Size(75, 23);
-            this.buttonBack_Click.TabIndex = 6;
-            this.buttonBack_Click.Text = "Назад";
-            this.buttonBack_Click.UseVisualStyleBackColor = true;
-            this.buttonBack_Click.Click += new System.EventHandler(this.buttonBack_Click_Click);
-            // 
-            // buttonForward_Click
-            // 
-            this.buttonForward_Click.Location = new System.Drawing.Point(801, 12);
-            this.buttonForward_Click.Name = "buttonForward_Click";
-            this.buttonForward_Click.Size = new System.Drawing.Size(75, 23);
-            this.buttonForward_Click.TabIndex = 7;
-            this.buttonForward_Click.Text = "Вперед";
-            this.buttonForward_Click.UseVisualStyleBackColor = true;
-            this.buttonForward_Click.Click += new System.EventHandler(this.buttonForward_Click_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1033, 547);
-            this.Controls.Add(this.buttonForward_Click);
-            this.Controls.Add(this.buttonBack_Click);
             this.Controls.Add(this.tabControlMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -480,8 +456,6 @@
         private System.Windows.Forms.TextBox textBoxAddPertnerDirector;
         private System.Windows.Forms.TextBox textBoxAddPartnerName;
         private System.Windows.Forms.Button buttonAddPartner;
-        private System.Windows.Forms.Button buttonBack_Click;
-        private System.Windows.Forms.Button buttonForward_Click;
     }
 }
 
