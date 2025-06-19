@@ -60,6 +60,25 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPageUpdatePartner = new System.Windows.Forms.TabPage();
+            this.buttonUpdatePartner = new System.Windows.Forms.Button();
+            this.textBoxUpdatePartnerRating = new System.Windows.Forms.TextBox();
+            this.textBoxUpdatePartnerPhone = new System.Windows.Forms.TextBox();
+            this.textBoxUpdatePartnerINN = new System.Windows.Forms.TextBox();
+            this.textBoxUpdatePartnerAddress = new System.Windows.Forms.TextBox();
+            this.textBoxUpdatePartnerEmail = new System.Windows.Forms.TextBox();
+            this.textBoxUpdatePartnerDirector = new System.Windows.Forms.TextBox();
+            this.textBoxUpdatePartnerName = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.comboBoxUpdatePartner = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.LabelUpdatePartnerInfo = new System.Windows.Forms.Label();
+            this.buttonPartnerEditNavigate = new System.Windows.Forms.Button();
             this.tabControlMain.SuspendLayout();
             this.tabPagePartners.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPartners)).BeginInit();
@@ -67,6 +86,7 @@
             this.tabPageHistory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHistory)).BeginInit();
             this.tabPageAddPartner.SuspendLayout();
+            this.tabPageUpdatePartner.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlMain
@@ -84,6 +104,7 @@
             // 
             // tabPagePartners
             // 
+            this.tabPagePartners.Controls.Add(this.buttonPartnerEditNavigate);
             this.tabPagePartners.Controls.Add(this.buttonDeletePartner);
             this.tabPagePartners.Controls.Add(this.dataGridViewPartners);
             this.tabPagePartners.Controls.Add(this.pictureBox1);
@@ -152,7 +173,7 @@
             // 
             // buttonGoToAddPartner
             // 
-            this.buttonGoToAddPartner.Location = new System.Drawing.Point(734, 42);
+            this.buttonGoToAddPartner.Location = new System.Drawing.Point(633, 42);
             this.buttonGoToAddPartner.Name = "buttonGoToAddPartner";
             this.buttonGoToAddPartner.Size = new System.Drawing.Size(75, 23);
             this.buttonGoToAddPartner.TabIndex = 0;
@@ -383,22 +404,221 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(186)))), ((int)(((byte)(128)))));
-            this.label4.Location = new System.Drawing.Point(65, 24);
+            this.label4.Location = new System.Drawing.Point(63, 35);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(150, 17);
+            this.label4.Size = new System.Drawing.Size(186, 21);
             this.label4.TabIndex = 0;
             this.label4.Text = "Добавление партнера";
             // 
             // tabPageUpdatePartner
             // 
+            this.tabPageUpdatePartner.Controls.Add(this.buttonUpdatePartner);
+            this.tabPageUpdatePartner.Controls.Add(this.textBoxUpdatePartnerRating);
+            this.tabPageUpdatePartner.Controls.Add(this.textBoxUpdatePartnerPhone);
+            this.tabPageUpdatePartner.Controls.Add(this.textBoxUpdatePartnerINN);
+            this.tabPageUpdatePartner.Controls.Add(this.textBoxUpdatePartnerAddress);
+            this.tabPageUpdatePartner.Controls.Add(this.textBoxUpdatePartnerEmail);
+            this.tabPageUpdatePartner.Controls.Add(this.textBoxUpdatePartnerDirector);
+            this.tabPageUpdatePartner.Controls.Add(this.textBoxUpdatePartnerName);
+            this.tabPageUpdatePartner.Controls.Add(this.label19);
+            this.tabPageUpdatePartner.Controls.Add(this.label18);
+            this.tabPageUpdatePartner.Controls.Add(this.label17);
+            this.tabPageUpdatePartner.Controls.Add(this.label16);
+            this.tabPageUpdatePartner.Controls.Add(this.label15);
+            this.tabPageUpdatePartner.Controls.Add(this.label14);
+            this.tabPageUpdatePartner.Controls.Add(this.label13);
+            this.tabPageUpdatePartner.Controls.Add(this.comboBoxUpdatePartner);
+            this.tabPageUpdatePartner.Controls.Add(this.label6);
+            this.tabPageUpdatePartner.Controls.Add(this.LabelUpdatePartnerInfo);
+            this.tabPageUpdatePartner.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tabPageUpdatePartner.Location = new System.Drawing.Point(4, 22);
             this.tabPageUpdatePartner.Name = "tabPageUpdatePartner";
             this.tabPageUpdatePartner.Size = new System.Drawing.Size(1021, 500);
             this.tabPageUpdatePartner.TabIndex = 3;
             this.tabPageUpdatePartner.Text = "Редактирование партнера";
             this.tabPageUpdatePartner.UseVisualStyleBackColor = true;
+            // 
+            // buttonUpdatePartner
+            // 
+            this.buttonUpdatePartner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(186)))), ((int)(((byte)(128)))));
+            this.buttonUpdatePartner.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonUpdatePartner.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonUpdatePartner.Location = new System.Drawing.Point(191, 398);
+            this.buttonUpdatePartner.Name = "buttonUpdatePartner";
+            this.buttonUpdatePartner.Size = new System.Drawing.Size(162, 30);
+            this.buttonUpdatePartner.TabIndex = 17;
+            this.buttonUpdatePartner.Text = "Сохранить изменения";
+            this.buttonUpdatePartner.UseVisualStyleBackColor = false;
+            this.buttonUpdatePartner.Click += new System.EventHandler(this.buttonUpdatePartner_Click);
+            // 
+            // textBoxUpdatePartnerRating
+            // 
+            this.textBoxUpdatePartnerRating.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxUpdatePartnerRating.Location = new System.Drawing.Point(191, 349);
+            this.textBoxUpdatePartnerRating.Name = "textBoxUpdatePartnerRating";
+            this.textBoxUpdatePartnerRating.Size = new System.Drawing.Size(182, 25);
+            this.textBoxUpdatePartnerRating.TabIndex = 16;
+            // 
+            // textBoxUpdatePartnerPhone
+            // 
+            this.textBoxUpdatePartnerPhone.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxUpdatePartnerPhone.Location = new System.Drawing.Point(191, 315);
+            this.textBoxUpdatePartnerPhone.Name = "textBoxUpdatePartnerPhone";
+            this.textBoxUpdatePartnerPhone.Size = new System.Drawing.Size(182, 25);
+            this.textBoxUpdatePartnerPhone.TabIndex = 15;
+            // 
+            // textBoxUpdatePartnerINN
+            // 
+            this.textBoxUpdatePartnerINN.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxUpdatePartnerINN.Location = new System.Drawing.Point(191, 281);
+            this.textBoxUpdatePartnerINN.Name = "textBoxUpdatePartnerINN";
+            this.textBoxUpdatePartnerINN.Size = new System.Drawing.Size(182, 25);
+            this.textBoxUpdatePartnerINN.TabIndex = 14;
+            // 
+            // textBoxUpdatePartnerAddress
+            // 
+            this.textBoxUpdatePartnerAddress.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxUpdatePartnerAddress.Location = new System.Drawing.Point(191, 247);
+            this.textBoxUpdatePartnerAddress.Name = "textBoxUpdatePartnerAddress";
+            this.textBoxUpdatePartnerAddress.Size = new System.Drawing.Size(182, 25);
+            this.textBoxUpdatePartnerAddress.TabIndex = 13;
+            // 
+            // textBoxUpdatePartnerEmail
+            // 
+            this.textBoxUpdatePartnerEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxUpdatePartnerEmail.Location = new System.Drawing.Point(191, 213);
+            this.textBoxUpdatePartnerEmail.Name = "textBoxUpdatePartnerEmail";
+            this.textBoxUpdatePartnerEmail.Size = new System.Drawing.Size(182, 25);
+            this.textBoxUpdatePartnerEmail.TabIndex = 12;
+            // 
+            // textBoxUpdatePartnerDirector
+            // 
+            this.textBoxUpdatePartnerDirector.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxUpdatePartnerDirector.Location = new System.Drawing.Point(191, 179);
+            this.textBoxUpdatePartnerDirector.Name = "textBoxUpdatePartnerDirector";
+            this.textBoxUpdatePartnerDirector.Size = new System.Drawing.Size(182, 25);
+            this.textBoxUpdatePartnerDirector.TabIndex = 11;
+            // 
+            // textBoxUpdatePartnerName
+            // 
+            this.textBoxUpdatePartnerName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxUpdatePartnerName.Location = new System.Drawing.Point(191, 145);
+            this.textBoxUpdatePartnerName.Name = "textBoxUpdatePartnerName";
+            this.textBoxUpdatePartnerName.Size = new System.Drawing.Size(182, 25);
+            this.textBoxUpdatePartnerName.TabIndex = 10;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label19.Location = new System.Drawing.Point(119, 349);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(56, 17);
+            this.label19.TabIndex = 9;
+            this.label19.Text = "Рейтинг:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label18.Location = new System.Drawing.Point(115, 315);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(63, 17);
+            this.label18.TabIndex = 8;
+            this.label18.Text = "Телефон:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label17.Location = new System.Drawing.Point(136, 281);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(39, 17);
+            this.label17.TabIndex = 7;
+            this.label17.Text = "ИНН:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.Location = new System.Drawing.Point(130, 247);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(47, 17);
+            this.label16.TabIndex = 6;
+            this.label16.Text = "Адрес:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.Location = new System.Drawing.Point(134, 213);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(42, 17);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "Email:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.Location = new System.Drawing.Point(110, 179);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(69, 17);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Директор:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(57, 145);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(128, 17);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Название партнера:";
+            // 
+            // comboBoxUpdatePartner
+            // 
+            this.comboBoxUpdatePartner.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxUpdatePartner.Location = new System.Drawing.Point(115, 86);
+            this.comboBoxUpdatePartner.Name = "comboBoxUpdatePartner";
+            this.comboBoxUpdatePartner.Size = new System.Drawing.Size(196, 25);
+            this.comboBoxUpdatePartner.TabIndex = 18;
+            this.comboBoxUpdatePartner.SelectedIndexChanged += new System.EventHandler(this.comboBoxUpdatePartner_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(42, 86);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 16);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Партнер:";
+            // 
+            // LabelUpdatePartnerInfo
+            // 
+            this.LabelUpdatePartnerInfo.AutoSize = true;
+            this.LabelUpdatePartnerInfo.BackColor = System.Drawing.Color.White;
+            this.LabelUpdatePartnerInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelUpdatePartnerInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(186)))), ((int)(((byte)(128)))));
+            this.LabelUpdatePartnerInfo.Location = new System.Drawing.Point(41, 38);
+            this.LabelUpdatePartnerInfo.Name = "LabelUpdatePartnerInfo";
+            this.LabelUpdatePartnerInfo.Size = new System.Drawing.Size(324, 21);
+            this.LabelUpdatePartnerInfo.TabIndex = 0;
+            this.LabelUpdatePartnerInfo.Text = "Мастер пол | Редактирование партнера";
+            // 
+            // buttonPartnerEditNavigate
+            // 
+            this.buttonPartnerEditNavigate.Location = new System.Drawing.Point(714, 42);
+            this.buttonPartnerEditNavigate.Name = "buttonPartnerEditNavigate";
+            this.buttonPartnerEditNavigate.Size = new System.Drawing.Size(107, 23);
+            this.buttonPartnerEditNavigate.TabIndex = 6;
+            this.buttonPartnerEditNavigate.Text = "Редактировать";
+            this.buttonPartnerEditNavigate.UseVisualStyleBackColor = true;
+            this.buttonPartnerEditNavigate.Click += new System.EventHandler(this.buttonPartnerEditNavigate_Click);
             // 
             // Form1
             // 
@@ -419,6 +639,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHistory)).EndInit();
             this.tabPageAddPartner.ResumeLayout(false);
             this.tabPageAddPartner.PerformLayout();
+            this.tabPageUpdatePartner.ResumeLayout(false);
+            this.tabPageUpdatePartner.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -456,6 +678,25 @@
         private System.Windows.Forms.TextBox textBoxAddPertnerDirector;
         private System.Windows.Forms.TextBox textBoxAddPartnerName;
         private System.Windows.Forms.Button buttonAddPartner;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox comboBoxUpdatePartner;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label LabelUpdatePartnerInfo;
+        private System.Windows.Forms.TextBox textBoxUpdatePartnerRating;
+        private System.Windows.Forms.TextBox textBoxUpdatePartnerPhone;
+        private System.Windows.Forms.TextBox textBoxUpdatePartnerINN;
+        private System.Windows.Forms.TextBox textBoxUpdatePartnerAddress;
+        private System.Windows.Forms.TextBox textBoxUpdatePartnerEmail;
+        private System.Windows.Forms.TextBox textBoxUpdatePartnerDirector;
+        private System.Windows.Forms.TextBox textBoxUpdatePartnerName;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button buttonUpdatePartner;
+        private System.Windows.Forms.Button buttonPartnerEditNavigate;
     }
 }
 

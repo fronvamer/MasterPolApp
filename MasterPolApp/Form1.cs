@@ -161,6 +161,11 @@ namespace MasterPolApp
                 LoadComboBoxHistory();
                 LoadHistory(); 
             }
+
+            if (tabControlMain.SelectedIndex == 3)
+            {
+                LoadComboBoxUpdatePartner();    
+            }
         }
         private void comboBoxHistory_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -212,6 +217,99 @@ namespace MasterPolApp
             LoadPartners();
         }
 
-      
+        private void LoadComboBoxUpdatePartner ()
+        {
+
+            using (var context = new DbModel())
+            {
+                var partners = context.Partners
+                    .Select(p => new {p.Id,p.Name })
+                    .ToList();
+                comboBoxUpdatePartner.DisplayMember = "Name";
+                comboBoxUpdatePartner.ValueMember = "Id";
+                comboBoxUpdatePartner.DataSource = partners;    
+            }
+        }
+
+        private void comboBoxUpdatePartner_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxUpdatePartner.SelectedValue is int selectedPartnerId)
+            {
+                using (var context = new DbModel())
+                {
+                    var partner = context.Partners
+                        .Include(p => p.PartnerProducts) // ВАЖНО: загрузка связанных данных
+                        .FirstOrDefault(p => p.Id == selectedPartnerId);
+
+                    if (partner != null)
+                    {
+                        textBoxUpdatePartnerName.Text = partner.Name;
+                        textBoxUpdatePartnerDirector.Text = partner.Director;
+                        textBoxUpdatePartnerEmail.Text = partner.Email;
+                        textBoxUpdatePartnerAddress.Text = partner.Address;
+                        textBoxUpdatePartnerINN.Text = partner.INN;
+                        textBoxUpdatePartnerPhone.Text = partner.Phone;
+                        textBoxUpdatePartnerRating.Text = Convert.ToString(partner.Rating);
+                    }
+                }
+            }
+        }
+
+        private void buttonUpdatePartner_Click(object sender, EventArgs e)
+        {
+            if (comboBoxUpdatePartner.SelectedValue is int selectedPartnerId)
+            {
+                using (var context = new DbModel())
+                {
+                    var partner = context.Partners
+                        .Include(p => p.PartnerProducts) // ВАЖНО: загрузка связанных данных
+                        .FirstOrDefault(p => p.Id == selectedPartnerId);
+
+                    if (partner != null)
+                    {
+                        partner.Name = textBoxUpdatePartnerName.Text;
+                        partner.Director = textBoxUpdatePartnerDirector.Text;
+                        partner.Email = textBoxUpdatePartnerEmail.Text;
+                        partner.Address = textBoxUpdatePartnerAddress.Text;
+                        partner.INN = textBoxUpdatePartnerINN.Text;
+                        partner.Phone = textBoxUpdatePartnerPhone.Text;
+
+                        if (int.TryParse(textBoxUpdatePartnerRating.Text, out int rating))
+                        {
+                            partner.Rating = rating;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Введите корректный рейтинг.");
+                            return;
+                        }
+
+                        context.SaveChanges();
+                        MessageBox.Show("Информация о партнёре обновлена.");
+                        LoadPartners();
+                    }
+                }
+            }
+        }
+
+
+        private void buttonPartnerEditNavigate_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewPartners.CurrentRow == null)
+            {
+                MessageBox.Show("Сначала выберите партнёра для редактирования.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            int selectedPartnerId = (int)dataGridViewPartners.CurrentRow.Cells["Id"].Value;
+
+            tabControlMain.SelectedIndex = 3; // Переключаемся на вкладку редактирования
+
+            LoadComboBoxUpdatePartner();
+
+            // Установка выбранного партнёра в comboBox
+            comboBoxUpdatePartner.SelectedValue = selectedPartnerId;
+        }
+
     }
 }
