@@ -96,10 +96,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Partners_import.xlsx" />
-    <None Include="Resources\Partner_products_import.xlsx" />
-    <None Include="Resources\Products_import.xlsx" />
-    <None Include="Resources\Product_type_import.xlsx" />
     <None Include="Resources\Мастер пол.png" />
   </ItemGroup>
   <ItemGroup>

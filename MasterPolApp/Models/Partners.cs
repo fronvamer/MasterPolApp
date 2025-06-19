@@ -5,6 +5,7 @@ namespace MasterPolApp.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Linq;
 
     public partial class Partners
     {
@@ -39,5 +40,17 @@ namespace MasterPolApp.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PartnerProducts> PartnerProducts { get; set; }
+        public virtual int Discount
+        {
+            get
+            {
+                int totalSold = PartnerProducts?.Sum(pp => pp.Quantity) ?? 0;
+
+                if (totalSold < 10000) return 0;
+                if (totalSold < 50000) return 5;
+                if (totalSold < 300000) return 10;
+                return 15;
+            }
+        }
     }
 }

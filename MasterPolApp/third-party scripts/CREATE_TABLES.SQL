@@ -35,3 +35,47 @@ CREATE TABLE PartnerProducts (
     CONSTRAINT FK_PartnerProducts_Partners FOREIGN KEY (PartnerId) REFERENCES Partners(Id),
     CONSTRAINT FK_PartnerProducts_Products FOREIGN KEY (ProductId) REFERENCES Products(Id)
 );
+
+-- OldQuery
+
+-- Создание таблицы партнеров
+CREATE TABLE Partners (
+    PartnerId INT IDENTITY(1,1) PRIMARY KEY,
+    PartnerType NVARCHAR(50),
+    CompanyName NVARCHAR(255),
+    LegalAddress NVARCHAR(MAX),
+    INN NVARCHAR(12),
+    DirectorName NVARCHAR(255),
+    Phone NVARCHAR(20),
+    Email NVARCHAR(100),
+    Logo NVARCHAR(MAX), -- Путь или base64
+    Rating INT
+);
+
+-- Места продаж партнера
+CREATE TABLE SalesLocations (
+    SalesLocationId INT IDENTITY(1,1) PRIMARY KEY,
+    PartnerId INT FOREIGN KEY REFERENCES Partners(PartnerId) ON DELETE CASCADE,
+    LocationName NVARCHAR(255),
+    LocationType NVARCHAR(50)
+);
+
+-- История реализации продукции
+CREATE TABLE SalesHistory (
+    SaleId INT IDENTITY(1,1) PRIMARY KEY,
+    PartnerId INT FOREIGN KEY REFERENCES Partners(PartnerId) ON DELETE CASCADE,
+    ProductName NVARCHAR(255),
+    Quantity INT,
+    TotalAmount DECIMAL(18, 2),
+    SaleDate DATE
+);
+
+-- История изменения рейтингов
+CREATE TABLE RatingHistory (
+    RatingChangeId INT IDENTITY(1,1) PRIMARY KEY,
+    PartnerId INT FOREIGN KEY REFERENCES Partners(PartnerId) ON DELETE CASCADE,
+    OldRating INT,
+    NewRating INT,
+    ChangedBy NVARCHAR(255),
+    ChangeDate DATETIME DEFAULT GETDATE()
+);

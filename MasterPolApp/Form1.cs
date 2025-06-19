@@ -37,7 +37,10 @@ namespace MasterPolApp
         {
             using (var context = new DbModel())
             {
-                dataGridViewPartners.DataSource = context.Partners
+                var partners = context.Partners
+                    .Include(p => p.PartnerProducts) // загрузим связанные данные
+                    .ToList() // загружаем из БД, теперь мы в памяти
+
                     .Select(p => new
                     {
                         p.Id,
@@ -47,11 +50,15 @@ namespace MasterPolApp
                         p.Address,
                         p.INN,
                         p.Phone,
-                        p.Rating
+                        p.Rating,
+                        p.Discount // теперь можно безопасно использовать
                     })
                     .ToList();
+
+                dataGridViewPartners.DataSource = partners;
             }
         }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
