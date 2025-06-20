@@ -1,4 +1,22 @@
-﻿using MasterPolApp.Models;
+﻿<CodeSnippet Format="1.0.0">
+  <Header>
+    <Title>log</Title>
+    <Shortcut>log</Shortcut>
+    <Description>Console log</Description>
+    <Author>name</Author>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>message</ID>
+        <ToolTip>Message to log</ToolTip>
+        <Default>message</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="csharp">
+		<![CDATA[
+	 
+using MasterPolApp.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,9 +59,9 @@ namespace MasterPolApp
 
         private void LoadPartners()
         {
-
-
-                var partners = _context.Partners
+            using (var context = new DbModel())
+            {
+                var partners = context.Partners
                     .Include(p => p.PartnerProducts) // загрузим связанные данные
                     .ToList() // загружаем из БД, теперь мы в памяти
 
@@ -62,7 +80,7 @@ namespace MasterPolApp
                     .ToList();
 
                 dataGridViewPartners.DataSource = partners;
-            
+            }
         }
 
 
@@ -95,12 +113,13 @@ namespace MasterPolApp
 
             int partnerId = (int)dataGridViewPartners.CurrentRow.Cells["Номер_пп"].Value;
 
-            
-                var partnerToDelete = _context.Partners.FirstOrDefault(p => p.Id == partnerId);
+            using (var context = new DbModel())
+            {
+                var partnerToDelete = context.Partners.FirstOrDefault(p => p.Id == partnerId);
                 if (partnerToDelete != null)
                 {
-                _context.Partners.Remove(partnerToDelete);
-                _context.SaveChanges();
+                    context.Partners.Remove(partnerToDelete);
+                    context.SaveChanges();
                     MessageBox.Show("Партнёр успешно удалён.");
 
                     LoadPartners(); // Обновить таблицу после удаления
@@ -109,25 +128,27 @@ namespace MasterPolApp
                 {
                     MessageBox.Show("Партнёр не найден в базе данных.");
                 }
-            
+            }
         }
 
         private void LoadComboBoxHistory()
         {
-
-                var partners = _context.Partners
+            using (var context = new DbModel())
+            {
+                var partners = context.Partners
                     .Select(p => new { p.Id, p.Name })
                     .ToList();
 
                 comboBoxHistory.DisplayMember = "Name";
                 comboBoxHistory.ValueMember = "Id";
                 comboBoxHistory.DataSource = partners;
-            
+            }
         }
         private void LoadHistory(int? partnerId = null)
         {
-           
-                var query = _context.PartnerProducts
+            using (var context = new DbModel())
+            {
+                var query = context.PartnerProducts
                     .Include(pp => pp.Partners)
                     .Include(pp => pp.Products)
                     .AsQueryable();
@@ -149,7 +170,7 @@ namespace MasterPolApp
                     .ToList();
 
                 dataGridViewHistory.DataSource = historyData;
-            
+            }
         }
         private void tabControlMain_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -313,7 +334,7 @@ namespace MasterPolApp
 
             // Установка выбранного партнёра в comboBox
             comboBoxUpdatePartner.SelectedValue = selectedPartnerId;
-        } 
+        }
 
         private void CheckMaterial ()
         {
@@ -427,3 +448,9 @@ namespace MasterPolApp
        
     }
 }
+
+
+	 
+]]></Code>
+  </Snippet>
+</CodeSnippet>

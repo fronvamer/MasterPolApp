@@ -1,0 +1,68 @@
+﻿<CodeSnippet Format="1.0.0">
+  <Header>
+    <Title>log</Title>
+    <Shortcut>log</Shortcut>
+    <Description>Console log</Description>
+    <Author>name</Author>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>message</ID>
+        <ToolTip>Message to log</ToolTip>
+        <Default>message</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="csharp">
+		<![CDATA[
+		--InitializeComponents
+		        public Form1()
+        {
+            InitializeComponent();
+            LoadPartners();
+        }
+		
+		
+		-- DataLoad
+    private void LoadPartners()
+        {
+            using (var context = new DbModel())
+            {
+                var partners = context.Partners
+                    .Include(p => p.PartnerProducts)
+                    .ToList();
+                 dataGridViewPartners.DataSource = partners; 
+            }
+        }
+       -- DataLoad2
+	   
+	      private void LoadPartners()
+        {
+            using (var context = new DbModel())
+            {
+                var partners = context.Partners
+                    .Include(p => p.PartnerProducts) // загрузим связанные данные
+                    .ToList() // загружаем из БД, теперь мы в памяти
+
+                    .Select(p => new
+                    {
+                        Номер_пп = p.Id,
+                        Наименование = p.Name,
+                        Директор = p.Director,
+                        Почта = p.Email,
+                        Адрес = p.Address,
+                        ИНН = p.INN,
+                        Телефон = p.Phone,
+                        Рейтинг = p.Rating,
+                        Скидка = p.Discount 
+                    })
+                    .ToList();
+
+                dataGridViewPartners.DataSource = partners;
+            }
+        }
+
+	 
+]]></Code>
+  </Snippet>
+</CodeSnippet>

@@ -1,4 +1,21 @@
-﻿
+﻿<CodeSnippet Format="1.0.0">
+  <Header>
+    <Title>log</Title>
+    <Shortcut>log</Shortcut>
+    <Description>Console log</Description>
+    <Author>name</Author>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>message</ID>
+        <ToolTip>Message to log</ToolTip>
+        <Default>message</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="csharp">
+		<![CDATA[
+	 
 CREATE TABLE ProductTypes (
     Id INT PRIMARY KEY IDENTITY(1,1),
     Name NVARCHAR(255) NOT NULL,
@@ -93,60 +110,7 @@ CREATE TABLE RatingHistory (
     ChangeDate DATETIME DEFAULT GETDATE()
 );
 
-
--- расширенный скрипт 
-
-CREATE TABLE Persons (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    LastName NVARCHAR(100) NOT NULL,
-    FirstName NVARCHAR(100) NOT NULL,
-    MiddleName NVARCHAR(100) NULL
-);
-
-CREATE TABLE Addresses (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    Country NVARCHAR(100) NULL,
-    Region NVARCHAR(100) NULL,
-    City NVARCHAR(100) NULL,
-    Street NVARCHAR(100) NULL,
-    Building NVARCHAR(50) NULL,
-    PostalCode NVARCHAR(20) NULL
-);
-
-CREATE TABLE Partners (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    Name NVARCHAR(255) NOT NULL,
-    DirectorId INT NULL,
-    Email NVARCHAR(255) NULL,
-    AddressId INT NULL,
-    INN NVARCHAR(50) NULL,
-    Phone NVARCHAR(50) NULL,
-    Rating INT NOT NULL,
-    CONSTRAINT FK_Partners_Directors FOREIGN KEY (DirectorId) REFERENCES Persons(Id),
-    CONSTRAINT FK_Partners_Addresses FOREIGN KEY (AddressId) REFERENCES Addresses(Id)
-);
-
-CREATE TABLE ProductTypes (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    Name NVARCHAR(255) NOT NULL,
-    Rate FLOAT NOT NULL
-);
-
-CREATE TABLE Products (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    Name NVARCHAR(255) NOT NULL,
-    Article NVARCHAR(100) NULL,
-    ProductTypeId INT NOT NULL,
-    Price FLOAT NOT NULL,
-    CONSTRAINT FK_Products_ProductTypes FOREIGN KEY (ProductTypeId) REFERENCES ProductTypes(Id)
-);
-
-CREATE TABLE PartnerProducts (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    PartnerId INT NOT NULL,
-    ProductId INT NOT NULL,
-    Quantity INT NOT NULL,
-    SaleDate DATE NOT NULL,
-    CONSTRAINT FK_PartnerProducts_Partners FOREIGN KEY (PartnerId) REFERENCES Partners(Id),
-    CONSTRAINT FK_PartnerProducts_Products FOREIGN KEY (ProductId) REFERENCES Products(Id)
-);
+	 
+]]></Code>
+  </Snippet>
+</CodeSnippet>

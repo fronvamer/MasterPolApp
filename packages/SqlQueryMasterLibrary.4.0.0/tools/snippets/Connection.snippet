@@ -1,0 +1,55 @@
+﻿<CodeSnippet Format="1.0.0">
+  <Header>
+    <Title>log</Title>
+    <Shortcut>log</Shortcut>
+    <Description>Console log</Description>
+    <Author>name</Author>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>message</ID>
+        <ToolTip>Message to log</ToolTip>
+        <Default>message</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="csharp">
+		<![CDATA[
+	 private void CheckMaterial ()
+        {
+            int materialNeeded = CalculateRequiredMaterial(
+        productTypeId: 2,
+        productCount: 100,
+        parameter1: 1.2,
+        parameter2: 1.5
+    );
+
+            MessageBox.Show($"Необходимое количество материала: {materialNeeded}");
+        }
+
+
+        private int CalculateRequiredMaterial( int productTypeId, int productCount, double parameter1, double parameter2)
+        {
+            if (productCount <= 0 || parameter1 <= 0 || parameter2 <= 0)
+                return -1;
+
+            using (var context = new DbModel())
+            {
+                var productType = context.ProductTypes.Find(productTypeId);
+
+                if (productType == null)
+                    return -1;
+
+                double baseAmountPerProduct = parameter1 * parameter2 * productType.Rate;
+                double totalMaterial = baseAmountPerProduct * productCount;
+
+                double wasteFactor = 1 + (productType.WastePercentage / 100.0);
+                double finalAmount = totalMaterial * wasteFactor;
+
+                return (int)Math.Ceiling(finalAmount); // округляем вверх
+            }
+        }
+	 
+]]></Code>
+  </Snippet>
+</CodeSnippet>
